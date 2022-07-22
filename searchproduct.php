@@ -41,8 +41,6 @@ function countdowntimer(id, time)
 
 <br><h3><?php echo $_GET[auctiontype];?></h3><hr>
 
-
-
 		<?php
 		$sqlcategory = "select * from category WHERE status='Active'";
 		if($_GET['searchcategory_id'] != "")
@@ -61,7 +59,7 @@ function countdowntimer(id, time)
 <div class="row">
 
 <?php
-			$sqlproduct = "select * from product WHERE status='Active'  AND product_name LIKE '%$_GET[searchcriteria]%' ";
+		$sqlproduct = "select * from product WHERE status='Active'  AND product_name LIKE '%$_GET[searchcriteria]%' ";
 		if($_GET['searchcategory_id'] != "")
 		{
 			if(isset($_GET['searchcategory_id']))

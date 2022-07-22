@@ -30,19 +30,15 @@ if(isset($_POST['btnlogin']))
 	{
 		$rs = mysqli_fetch_array($qresult);
 		$_SESSION["customer_id"] = $rs['customer_id'];
-		
 		$sql = "SELECT SUM(purchase_amount) FROM billing WHERE customer_id='$_SESSION[customer_id]' and status='Active' and payment_type='Deposit'";
 		$qsql = mysqli_query($con,$sql);
 		$rs = mysqli_fetch_array($qsql);
 		$depamt =  $rs[0];
-
 		$sql = "SELECT SUM(paid_amount) FROM payment WHERE customer_id='$_SESSION[customer_id]' and status='Active' and payment_type='Bid'";
 		$qsql = mysqli_query($con,$sql);
 		$rs = mysqli_fetch_array($qsql);
 		$widamt = $rs[0];
-
 		$accbalamt = $depamt-$widamt;
-		
 		if($accbalamt > 0)
 		{
 			echo "<script>window.location='index.php';</script>";
