@@ -201,7 +201,7 @@ $qsql = mysqli_query($con,$sql);
 echo mysqli_num_rows($qsql);
 ?>)</a></li>
 
-<li><a href="viewbillingcustomer.php">View Trasaction</a></li>
+
 			</ul>
 		</li>
 		<li class="drodown-show"><a href="#"> My Products <i class="fa fa-angle-down"></i></a>

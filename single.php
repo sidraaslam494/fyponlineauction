@@ -318,7 +318,7 @@ else
 		$qsqleditbidding = mysqli_query($con,$sqleditbidding);
 		while($rsedit= mysqli_fetch_array($qsqleditbidding))
 		{
-		echo "$rsedit[customer_name] bidded ₹". $rsedit['bidding_amount'] ." on $rsedit[bidding_date_time]<hr>";
+		echo "$rsedit[customer_name] bidded PKR". $rsedit['bidding_amount'] ." on $rsedit[bidding_date_time]<hr>";
 		}
 	?>
 	</p>
@@ -399,7 +399,7 @@ $i=0;
 <script type="application/javascript">countdowntimer('<?php echo $rsproduct[0].$i; ?>', '<?php echo date("M d, Y H:i:s",strtotime($rsproduct['end_date_time'])); ?>');</script>
 <!-- Timer code ends here -->
 				<div class="price-box">
-					<span class="new-price">Current Bid Amount : ₹<?php echo $rsproduct['starting_bid']; ?></span>
+					<span class="new-price">Current Bid Amount : PKR<?php echo $rsproduct['starting_bid']; ?></span>
 					
 					<?php /*<span class="old-price">$250.00</span> */ ?>
 				</div>

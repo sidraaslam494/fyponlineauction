@@ -23,7 +23,7 @@ include("header.php");
                     <div class="row ">
                         <div class="col-lg-6">
                             <div class="about-us-img">
-                                <img alt="" src="images/online-auction.jpg">
+                                <img alt="" src="images/auction-website.png">
                             </div>
                         </div>
                         <div class="col-lg-6">

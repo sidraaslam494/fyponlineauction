@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.0.2
+-- version 5.2.0
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 04, 2021 at 09:38 PM
--- Server version: 10.4.11-MariaDB
--- PHP Version: 7.2.31
+-- Generation Time: Aug 17, 2022 at 09:22 PM
+-- Server version: 10.4.24-MariaDB
+-- PHP Version: 7.4.29
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -74,64 +74,10 @@ INSERT INTO `bidding` (`bidding_id`, `customer_id`, `product_id`, `bidding_amoun
 (3242, 23, 148, 14.00, '2020-03-05 19:05:05', '', 'Active'),
 (3243, 23, 148, 15.00, '2020-03-05 19:05:18', '', 'Active'),
 (3244, 28, 156, 25.00, '2020-08-27 18:36:22', '', 'Active'),
-(3245, 31, 158, 12.00, '2021-04-05 00:40:33', '', 'Active');
-
--- --------------------------------------------------------
-
---
--- Table structure for table `billing`
---
-
-CREATE TABLE `billing` (
-  `billing_id` int(10) NOT NULL,
-  `customer_id` int(10) NOT NULL,
-  `product_id` int(10) NOT NULL,
-  `purchase_date` date NOT NULL,
-  `purchase_amount` float(10,2) NOT NULL,
-  `payment_type` varchar(20) NOT NULL,
-  `card_type` varchar(50) NOT NULL,
-  `card_number` varchar(20) NOT NULL,
-  `expire_date` date NOT NULL,
-  `cvv_number` varchar(5) NOT NULL,
-  `card_holder` varchar(50) NOT NULL,
-  `delivery_date` date NOT NULL,
-  `note` text NOT NULL,
-  `status` varchar(10) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
---
--- Dumping data for table `billing`
---
-
-INSERT INTO `billing` (`billing_id`, `customer_id`, `product_id`, `purchase_date`, `purchase_amount`, `payment_type`, `card_type`, `card_number`, `expire_date`, `cvv_number`, `card_holder`, `delivery_date`, `note`, `status`) VALUES
-(1326, 321, 231, '2020-01-11', 500.00, '12323', '3123', '545454545', '2020-01-13', '545', '5454545', '2020-01-20', '213213213', ''),
-(1327, 0, 125, '2020-02-05', 100.00, 'Sell', 'Debit Card', '1234567890123456', '2021-01-01', '545', 'yjut', '0000-00-00', '', 'Active'),
-(1328, 0, 126, '2020-02-05', 100.00, 'Sell', 'VISA', '1987654321234567', '2020-03-01', '543', 'Rajkiran', '0000-00-00', '', 'Active'),
-(1329, 8, 0, '2020-02-05', 500.00, 'Deposit', 'Credit card', '1234567890123456', '2020-02-01', '564', 'Raj kiran', '0000-00-00', '', 'Active'),
-(1330, 0, 127, '2020-02-05', 100.00, 'Sell', 'Debit Card', '1234567890123456', '2021-01-01', '433', 'Rajkiran', '0000-00-00', '', 'Active'),
-(1331, 0, 128, '2020-02-05', 100.00, 'Sell', 'Debit Card', '1234567890123456', '2021-01-01', '237', 'Rajkiran', '0000-00-00', '', 'Active'),
-(1332, 7, 0, '2020-02-05', 650.00, 'Deposit', 'Credit card', '9876543212346789', '2021-12-01', '237', 'karan', '0000-00-00', '', 'Active'),
-(1333, 0, 129, '2020-02-06', 100.00, 'Sell', 'Debit Card', '7894561230123456', '2020-03-01', '433', 'Raj', '0000-00-00', '', 'Active'),
-(1334, 9, 0, '2020-02-06', 300.00, 'Deposit', 'Debit Card', '1234567890123456', '2020-03-01', '453', 'Raj', '0000-00-00', '', 'Active'),
-(1335, 2, 0, '2020-02-13', 650.00, 'Deposit', 'Credit card', '1234567891012345', '2021-01-01', '458', 'Raj kiran', '0000-00-00', '', 'Active'),
-(1336, 0, 136, '2020-02-13', 100.00, 'Sell', 'Credit card', '1233213213213134', '2044-03-01', '443', 'da', '0000-00-00', '', 'Active'),
-(1337, 9, 0, '2020-03-04', 250.00, 'Deposit', 'Debit Card', '1234567890123456', '2021-01-01', '548', 'Raj kiran', '0000-00-00', '', 'Active'),
-(1338, 2, 0, '2020-03-04', 100.00, 'Deposit', '', '', '0000-00-00', '', '', '0000-00-00', '', 'Active'),
-(1339, 0, 138, '2020-03-04', 100.00, 'Sell', 'Master Card', '1234567890123456', '2021-01-01', '456', 'raj kiran', '0000-00-00', '', 'Active'),
-(1340, 2, 0, '2020-03-04', 0.00, 'Deposit', '', '', '0000-00-00', '', '', '0000-00-00', '', 'Active'),
-(1341, 0, 140, '2020-03-04', 100.00, 'Sell', 'Debit Card', '1234567890123456', '2021-01-01', '489', 'Raj kiran', '0000-00-00', '', 'Active'),
-(1342, 9, 141, '2020-03-04', 100.00, 'Sell', 'Debit Card', '1234567890123456', '2022-01-01', '125', 'Raj kiran', '0000-00-00', '', 'Active'),
-(1343, 0, 142, '2020-03-04', 100.00, 'Sell', 'Debit Card', '1234567890123456', '2021-01-01', '486', 'Raj kiran', '0000-00-00', '', 'Active'),
-(1344, 9, 0, '2020-03-04', 0.00, 'Deposit', '', '', '0000-00-00', '', '', '0000-00-00', '', 'Active'),
-(1345, 9, 0, '2020-03-04', 0.00, 'Deposit', '', '', '0000-00-00', '', '', '0000-00-00', '', 'Active'),
-(1346, 9, 0, '2020-03-04', 0.00, 'Deposit', '', '', '0000-00-00', '', '', '0000-00-00', '', 'Active'),
-(1347, 9, 0, '2020-03-04', 0.00, 'Deposit', '', '', '0000-00-00', '', '', '0000-00-00', '', 'Active'),
-(1348, 23, 0, '2020-03-05', 650.00, 'Deposit', 'Debit Card', '1234567890123456', '2021-01-01', '159', 'Raj kiran', '0000-00-00', '', 'Active'),
-(1349, 28, 157, '2020-08-27', 100.00, 'Sell', 'Debit Card', '4458966511144589', '2021-01-01', '486', 'Surendra', '0000-00-00', '', 'Active'),
-(1350, 28, 0, '2020-08-27', 100.00, 'Deposit', 'Debit Card', '1478529631234568', '2021-01-01', '158', 'Rupesh kumar', '0000-00-00', '', 'Active'),
-(1351, 30, 158, '2021-04-05', 100.00, 'Sell', 'Credit card', '1234567890123456', '2022-01-01', '456', 'Raj', '0000-00-00', '', 'Active'),
-(1352, 31, 0, '2021-04-05', 100.00, 'Deposit', 'Credit card', '1231231231231233', '2021-07-01', '547', 'Raj kiran', '0000-00-00', '', 'Active'),
-(1353, 30, 159, '2021-04-05', 100.00, 'Sell', 'Debit Card', '9872345678909876', '2022-01-01', '342', 'Ramjran', '0000-00-00', '', 'Active');
+(3245, 31, 158, 12.00, '2021-04-05 00:40:33', '', 'Active'),
+(3246, 35, 161, 1300000.00, '2022-08-03 21:56:51', '', 'Active'),
+(3247, 35, 161, 15000000.00, '2022-08-03 22:05:27', '', 'Active'),
+(3248, 38, 161, 16000000.00, '2022-08-04 11:54:06', '', 'Active');
 
 -- --------------------------------------------------------
 
@@ -155,12 +101,7 @@ INSERT INTO `category` (`category_id`, `category_name`, `category_icon`, `descri
 (16548, 'Mobile Phones', '363950331mobiles.jpg', 'Mobile Phone and Accessaries', 'Active'),
 (16549, 'Laptops', '1293881421laptop.jpg', 'Laptops and Accessaries', 'Active'),
 (16550, 'Camera', '155622865Camera.jpg', 'Camera and Accessaries', 'Active'),
-(16551, 'Others', '1871695161', 'Other categories', 'Active'),
-(16552, 'Watches', '5837watch.jpg', ' white day and date watch, which will never let you stay behind time.', 'Active'),
-(16558, 'Collectibles', 'oldcoinandnotes.jpg', 'Old Coin and Notes', 'Active'),
-(16559, 'Tablet Phones', 'tabphones.jpg', 'Tablet Phones', 'Active'),
-(16560, 'Gold jewellery', 'Gold jewellery.jpg', 'Gold jewellery', 'Active'),
-(16561, 'Sports and Games', '2075867780Sports & Games.jpg', 'Sports & Games', 'Active');
+(16551, 'Others', '1871695161', 'Other categories', 'Active');
 
 -- --------------------------------------------------------
 
@@ -188,12 +129,12 @@ CREATE TABLE `customer` (
 --
 
 INSERT INTO `customer` (`customer_id`, `customer_name`, `email_id`, `password`, `address`, `state`, `city`, `landmark`, `pincode`, `mobile_no`, `note`, `status`) VALUES
-(2, 'Rajesh Krishna', 'rajeshkrishna@gmail.com', '123456123456', 'Junction, Bendoorwell, Kankanady', 'Karnataka', 'Mangalore', 'Juntion Road', '575002', '7894561230', '', 'Active'),
-(7, 'Mahesh Kumar', 'maheshkumar@gmail.com', '123456789', '3rd floor, city light building', 'Karnataka', 'Mangalroe', 'Khazana Jeweller', '575003', '8217727968', '', 'Active'),
-(8, 'Preetham Bhat', 'preethambhat@gmail.com', 'q1w2e3r4', 'Balmatta Junction, Near Collector\'s Gate', 'Karnataka', 'Mangalore', 'RTO Junction', '575002', '9874563210', '', 'Active'),
-(9, 'Hudson A K', 'hudsonak@gmail.com', 't5y6u7i8', 'Near Syndicate Circle, opp. Domino\'s Pizza, Manipal', 'Karnataka', 'Manipal', 'Near KMC Hospital', '576104', '7894561230', '', 'Active'),
-(22, 'Manthesh kumar', 'mantheshkumar@gmail.com', '123456789', 'No.52, Jyoti Nivas College, 5th Block, Koramangala', 'Karnataka', 'Bengaluru', 'Premises of Tibetan Kitchen', '560095', '9874563210', '', 'Active'),
-(23, 'Nanda Gopal', 'nandagopal@gmail.com', '123456789', 'Apartment no. 02, 1st Cross Rd, Shastri Nagar', 'Karnataka', 'Ballari', 'RH Road', '583103', '9986055414', '', 'Active'),
+(2, 'Zeeshan', 'zeees@gmail.com', '123456123456', 'Junction, Bendoorwell, Kankanady', 'Karnataka', 'Mangalore', 'Juntion Road', '575002', '7894561230', '', 'Active'),
+(7, 'Ali', 'ali123@gmail.com', '123456789', '3rd floor, city light building', 'Karnataka', 'Mangalroe', 'Khazana Jeweller', '575003', '8217727968', '', 'Active'),
+(8, 'Ahmad', 'Ahmad12@gmail.com', 'q1w2e3r4', 'Balmatta Junction, Near Collector\'s Gate', 'Karnataka', 'Mangalore', 'RTO Junction', '575002', '9874563210', '', 'Active'),
+(9, 'vahab', 'vahab@gmail.com', 't5y6u7i8', 'Near Syndicate Circle, opp. Domino\'s Pizza, Manipal', 'Karnataka', 'Manipal', 'Near KMC Hospital', '576104', '7894561230', '', 'Active'),
+(22, 'zohaib', 'zaibi@gmail.com', '123456789', 'No.52, Jyoti Nivas College, 5th Block, Koramangala', 'Karnataka', 'Bengaluru', 'Premises of Tibetan Kitchen', '560095', '9874563210', '', 'Active'),
+(23, 'Nawal', 'nawalmasood@gmail.com', '123456789', 'Apartment no. 02, 1st Cross Rd, Shastri Nagar', 'Karnataka', 'Ballari', 'RH Road', '583103', '9986055414', '', 'Active'),
 (24, 'Manish Kumar', 'manishkumar@gmail.com', '123456789', 'Adi-udupi, Karnataka 576102', 'Karnataka', 'Mangalroe', 'Adi-udupi', '575003', '8217727968', '', 'Active'),
 (25, 'Suraj Mishra', 'surajmishra@gmail.com', '123456789', 'Shiva kripa, Vidya nagar, Post Nehru Nagar', 'Karnataka', 'Puttur', 'Philomena college', '574203', '8217778968', '', 'Active'),
 (26, 'Susheel kumar', 'susheelkumar@gmail.com', 'susheel123456789', 'Shiva kripa, Vidya nagar, Post Nehru Nagar', 'Karnataka', 'Puttur', 'Philomena college', '574203', '8217778968', '', 'Active'),
@@ -201,7 +142,14 @@ INSERT INTO `customer` (`customer_id`, `customer_name`, `email_id`, `password`, 
 (28, 'Surendra kumar', 'surendrakumar23@gmail.com', '123456789', '', '', '', '', '', '+919986051445', '', 'Active'),
 (29, 'Pranesh', 'mvaravinda@gmail.com', 'q1w2e3r4/', '', '', '', '', '', '+919986058114', '', 'Active'),
 (30, 'Achintya Kumar', 'achintyakumar@gmail.com', 'q1w2e3r4', '5th cross,\r\nBarikatte', 'Karnataka', 'Bangalore', 'KFC', '567367', '9985637336323', '', 'Active'),
-(31, 'Vilass kumar', 'vilaskumar@gmail.com', 'q1w2e3r4', '', '', '', '', '', '9876543211', '', 'Active');
+(31, 'Vilass kumar', 'vilaskumar@gmail.com', 'q1w2e3r4', '', '', '', '', '', '9876543211', '', 'Active'),
+(32, 'faizan', 'faizan12@gmail.com', '12345678', '', '', '', '', '', '12345678', '', 'Active'),
+(33, 'ABC', 'abc@mail.com', '12345678', '', '', '', '', '', '12345678', '', 'Active'),
+(34, 'Syeda Fatima', 'fatimasyed268@gmail.com', '12345678', 'model city 1', 'PB', 'Faisalabad', 'faisalabad', '123456', '1122333', '', 'Active'),
+(35, 'sidra', 'sidraaslam1122@gmail.com', '123456789', '', '', '', '', '', '12345', '', 'Active'),
+(36, 'sidra', 'sidra1232@gmail.com', '123456789', '', '', '', '', '', '12345678', '', 'Active'),
+(37, 'fatima', 'fatima123@gmail.com', '123456789', '', '', '', '', '', '123456789', '', 'Active'),
+(38, 'arshia', 'arshia1234@gmail.com', '123456789', '', '', '', '', '', '123456789', '', 'Active');
 
 -- --------------------------------------------------------
 
@@ -263,7 +211,11 @@ INSERT INTO `message` (`message_id`, `sender_id`, `receiver_id`, `message_date_t
 (35, 24, 9, '2020-03-05 15:21:01', 141, 'welcome\n', 'Customer'),
 (36, 24, 9, '2020-03-05 19:51:15', 141, 'yesll\n', 'Seller'),
 (37, 28, 8, '2020-08-27 15:08:00', 156, 'Hello\n', 'Customer'),
-(38, 28, 8, '2020-08-27 15:08:38', 156, 'I wanted to know some features about this product\n', 'Customer');
+(38, 28, 8, '2020-08-27 15:08:38', 156, 'I wanted to know some features about this product\n', 'Customer'),
+(39, 0, 0, '2022-07-24 02:13:56', 0, 'hello\n', 'Seller'),
+(40, 37, 9, '2022-08-04 15:18:50', 129, 'hello\n', 'Customer'),
+(41, 37, 9, '2022-08-04 15:18:50', 129, 'hello\n\n', 'Customer'),
+(42, 37, 9, '2022-08-04 15:19:09', 129, 'we want to show product\n', 'Customer');
 
 -- --------------------------------------------------------
 
@@ -318,7 +270,10 @@ INSERT INTO `payment` (`payment_id`, `customer_id`, `payment_type`, `product_id`
 (242, 23, 'Bid', 148, 3242, 19.00, '2020-03-05', 'Active'),
 (243, 23, 'Bid', 148, 3243, 20.00, '2020-03-05', 'Active'),
 (244, 28, 'Bid', 156, 3244, 0.25, '2020-08-27', 'Active'),
-(245, 31, 'Bid', 158, 3245, 0.12, '2021-04-05', 'Active');
+(245, 31, 'Bid', 158, 3245, 0.12, '2021-04-05', 'Active'),
+(246, 35, 'Bid', 161, 3246, 13000.00, '2022-08-03', 'Active'),
+(247, 35, 'Bid', 161, 3247, 150000.00, '2022-08-03', 'Active'),
+(248, 38, 'Bid', 161, 3248, 160000.00, '2022-08-04', 'Active');
 
 -- --------------------------------------------------------
 
@@ -370,7 +325,10 @@ INSERT INTO `product` (`product_id`, `customer_id`, `product_name`, `category_id
 (156, 8, 'Fujifilm Instax Mini 9 Party box, Lime Green Insta', 16550, 'This Fujifilm Instax Mini9 Point and Shoot Cameras image is for illustration purpose only. Actual image may vary.', 100.00, 25.00, '2020-02-05 10:55:36', '2021-02-05 05:30:00', 8000.00, 'fujifilm.jpg', 'One Year', '7-10 days', 'DSL', 'Active'),
 (157, 28, 'AlloyJewelSeT', 16560, 'Special Design And Unique Structure, A Popular Item\r\nWomen Love Jewellery\r\nSpecially Artificial Jewellery Adore A Women. They Wear It On Different Occasion. They Have Special Importance On Ring Ceremony, Wedding And Festive Time. They Can Also Wear It On Regular Basis . Make Your Moment Memorable With This Range. This Jewellery Features A Unique One Of A Kind Traditional Embellish With Antique Finish.\r\nThis Rich & Famous 2 In 1 Valentine Day Special Heart Pendant With Chain.\r\nRich & Famous Is A Tazs Brand In Fashion Jewelry Sector.', 255.00, 255.00, '2020-08-27 18:23:00', '2020-08-28 18:23:00', 50000.00, '1269626786gold.jpeg', '', '5-7 days', 'Akshaa', 'Active'),
 (158, 30, 'Bronze 1 Paisa Coin', 16558, 'Metal bronze copper round shape with hole 1 paisa coin george vi, 1943-1947, diameter 21.32 mm, 2 g- Multi color\r\nRound shape coin with hole\r\nExtremely fine coin\r\nMint mark may be different depends on coin availability\r\nThe images represent actual product though colour of the image and product may slightly differ', 10.00, 12.00, '2021-04-05 00:30:00', '2021-06-06 00:30:00', 5000.00, '116483368571QBdDX+McL._SL1200_.jpg', '', '3-4 Days', 'Indian Coin', 'Active'),
-(159, 30, 'Metal Bronze Coin', 16558, '1/2 Pice India 1936 George V – Metal Bronze Indian Coinage British India Coin \r\n100% Genuine Item\r\nSimilar Item Given\r\nLowest Price Deal\r\nBEST BUY', 10.00, 10.00, '2021-04-05 00:49:00', '2021-07-06 00:49:00', 10000.00, '1033808885coin.jpg', '', '7-10 days', 'Indian Coin', 'Active');
+(159, 30, 'Metal Bronze Coin', 16558, '1/2 Pice India 1936 George V – Metal Bronze Indian Coinage British India Coin \r\n100% Genuine Item\r\nSimilar Item Given\r\nLowest Price Deal\r\nBEST BUY', 10.00, 10.00, '2021-04-05 00:49:00', '2021-07-06 00:49:00', 10000.00, '1033808885coin.jpg', '', '7-10 days', 'Indian Coin', 'Active'),
+(160, 32, 'Iphone 11', 16548, 'iphone 11 not affordable', 100000.00, 100000.00, '2022-07-23 15:55:00', '2022-09-24 15:55:00', 200000.00, '334525610vpavic_210916_4760_0069.jpg', '', '3-4 Days', 'Apple', 'Active'),
+(161, 34, 'Iphone 12', 16548, 'It is very new', 125000.00, 16000000.00, '2022-07-23 22:44:00', '2022-08-30 22:44:00', 150000.00, '2136718269iphone12.jpg', '', '4-5 days', 'ntu', 'Active'),
+(162, 37, 'mobile', 16548, 'xyz', 23000.00, 23000.00, '2022-08-05 11:49:00', '0000-00-00 00:00:00', 40000.00, '20975141WhatsApp Image 2022-07-25 at 12.15.54 AM (1).jpeg', '', '4-5 days', 'NTU', 'Active');
 
 -- --------------------------------------------------------
 
@@ -382,7 +340,6 @@ CREATE TABLE `winners` (
   `winner_id` int(10) NOT NULL,
   `product_id` int(10) NOT NULL,
   `customer_id` int(10) NOT NULL,
-  `winners_image` varchar(100) NOT NULL,
   `winning_bid` float(10,2) NOT NULL,
   `end_date` date NOT NULL,
   `status` varchar(10) NOT NULL
@@ -392,18 +349,19 @@ CREATE TABLE `winners` (
 -- Dumping data for table `winners`
 --
 
-INSERT INTO `winners` (`winner_id`, `product_id`, `customer_id`, `winners_image`, `winning_bid`, `end_date`, `status`) VALUES
-(3, 126, 2, 'Willy-Nilly_My_Passport_Size_Photo.jpg', 440.00, '2020-02-13', 'Pending'),
-(4, 143, 9, 'Sandip_pic.png', 26.00, '2020-03-04', 'Pending'),
-(5, 148, 25, 'saiful-bi.jpg', 25.00, '2020-03-05', 'Pending'),
-(6, 150, 26, 'ashok.jpg', 368.00, '2020-03-05', 'Pending'),
-(7, 151, 23, 'D-25456-a copy.jpg', 155.00, '2020-03-05', 'Pending'),
-(8, 152, 24, 'c53aa684465bc61455fd0d21537752fb.jpg', 1200.00, '2020-03-05', 'Pending'),
-(9, 153, 27, 'Passport-Size-Pic.jpg', 665.00, '2020-03-05', 'Pending'),
-(10, 127, 22, 'unnamed.jpg', 545.00, '2020-03-05', 'Pending'),
-(11, 128, 8, 'Passport_Size_Image_of_Nouman.jpg', 515.00, '2020-03-05', 'Pending'),
-(12, 129, 7, 'create-passport-size.jpg', 515.00, '2020-03-05', 'Pending'),
-(13, 156, 28, '', 25.00, '2020-08-27', 'Pending');
+INSERT INTO `winners` (`winner_id`, `product_id`, `customer_id`, `winning_bid`, `end_date`, `status`) VALUES
+(3, 126, 2, 440.00, '2020-02-13', 'Pending'),
+(4, 143, 9, 26.00, '2020-03-04', 'Pending'),
+(5, 148, 25, 25.00, '2020-03-05', 'Pending'),
+(6, 150, 26, 368.00, '2020-03-05', 'Pending'),
+(7, 151, 23, 155.00, '2020-03-05', 'Pending'),
+(8, 152, 24, 1200.00, '2020-03-05', 'Pending'),
+(9, 153, 27, 665.00, '2020-03-05', 'Pending'),
+(10, 127, 22, 545.00, '2020-03-05', 'Pending'),
+(11, 128, 8, 515.00, '2020-03-05', 'Pending'),
+(12, 129, 7, 515.00, '2020-03-05', 'Pending'),
+(13, 156, 28, 25.00, '2020-08-27', 'Pending'),
+(14, 158, 31, 12.00, '2021-04-05', 'Pending');
 
 --
 -- Indexes for dumped tables
@@ -414,12 +372,6 @@ INSERT INTO `winners` (`winner_id`, `product_id`, `customer_id`, `winners_image`
 --
 ALTER TABLE `bidding`
   ADD PRIMARY KEY (`bidding_id`);
-
---
--- Indexes for table `billing`
---
-ALTER TABLE `billing`
-  ADD PRIMARY KEY (`billing_id`);
 
 --
 -- Indexes for table `category`
@@ -471,13 +423,7 @@ ALTER TABLE `winners`
 -- AUTO_INCREMENT for table `bidding`
 --
 ALTER TABLE `bidding`
-  MODIFY `bidding_id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3246;
-
---
--- AUTO_INCREMENT for table `billing`
---
-ALTER TABLE `billing`
-  MODIFY `billing_id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1354;
+  MODIFY `bidding_id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3249;
 
 --
 -- AUTO_INCREMENT for table `category`
@@ -489,7 +435,7 @@ ALTER TABLE `category`
 -- AUTO_INCREMENT for table `customer`
 --
 ALTER TABLE `customer`
-  MODIFY `customer_id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=32;
+  MODIFY `customer_id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=39;
 
 --
 -- AUTO_INCREMENT for table `employee`
@@ -501,25 +447,25 @@ ALTER TABLE `employee`
 -- AUTO_INCREMENT for table `message`
 --
 ALTER TABLE `message`
-  MODIFY `message_id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=39;
+  MODIFY `message_id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=43;
 
 --
 -- AUTO_INCREMENT for table `payment`
 --
 ALTER TABLE `payment`
-  MODIFY `payment_id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=246;
+  MODIFY `payment_id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=249;
 
 --
 -- AUTO_INCREMENT for table `product`
 --
 ALTER TABLE `product`
-  MODIFY `product_id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=160;
+  MODIFY `product_id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=163;
 
 --
 -- AUTO_INCREMENT for table `winners`
 --
 ALTER TABLE `winners`
-  MODIFY `winner_id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
+  MODIFY `winner_id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
